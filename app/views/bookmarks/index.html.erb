@@ -1,4 +1,24 @@
 <html>
-<h1> My Bookmarks are here</h1>
-<li> <a href='http://<%= @index %>'><%= @index %></a></li>
+
+<title>My Bookmarks</title>
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<h1>My Bookmarks are here</h1>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="span4">
+      <h1>My Bookmarks</h1>
+      <hr>
+      <p>All your bookmarkss here</p>
+      <div class="well">
+			<% @bookmarks.each do |t| %>
+			<li> <a href='http://<%= t.bookmarkName %>'><%= t.bookmarkName %></a></li>
+			<% end %>
+      </div> <!-- well -->
+    </div> <!-- span4 -->
+  </div> <!-- row -->
+</div> <!-- container -->
 </html>

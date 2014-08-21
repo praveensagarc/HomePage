@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
   def index
-	@index = 'google.com'
+	@bookmarks = Bookmark.all
   end
 end
