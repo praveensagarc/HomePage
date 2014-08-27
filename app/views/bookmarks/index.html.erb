@@ -13,6 +13,11 @@
       <h1>My Bookmarks</h1>
       <hr>
       <p>All your bookmarkss here</p>
+	  <p>All your todos here</p>
+		<%= form_tag("/bookmarks/add", :method=>"post") do %>
+		  <%= text_field_tag(:bookmark_text) %>
+		  <%= submit_tag("Add bookmark", :class=>"btn") %>
+		<% end %>
       <div class="well">
 			<% @bookmarks.each do |t| %>
 			<li> <a href='http://<%= t.bookmarkName %>'><%= t.bookmarkName %></a></li>
@@ -21,4 +26,6 @@
     </div> <!-- span4 -->
   </div> <!-- row -->
 </div> <!-- container -->
+
+<button>Add bookmark </button>
 </html>
